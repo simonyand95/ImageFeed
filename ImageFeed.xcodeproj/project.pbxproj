@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB6690712A141E9000FBC5D7 /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6690702A141E9000FBC5D7 /* ImagesListCell.swift */; };
 		EBD09F912A03BC790065804D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD09F902A03BC790065804D /* AppDelegate.swift */; };
 		EBD09F932A03BC790065804D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD09F922A03BC790065804D /* SceneDelegate.swift */; };
-		EBD09F952A03BC790065804D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD09F942A03BC790065804D /* ViewController.swift */; };
+		EBD09F952A03BC790065804D /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD09F942A03BC790065804D /* ImagesListViewController.swift */; };
 		EBD09F982A03BC790065804D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD09F962A03BC790065804D /* Main.storyboard */; };
 		EBD09F9A2A03BC7A0065804D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD09F992A03BC7A0065804D /* Assets.xcassets */; };
 		EBD09F9D2A03BC7A0065804D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD09F9B2A03BC7A0065804D /* LaunchScreen.storyboard */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB6690702A141E9000FBC5D7 /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		EBD09F8D2A03BC790065804D /* ImageFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD09F902A03BC790065804D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD09F922A03BC790065804D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBD09F942A03BC790065804D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBD09F942A03BC790065804D /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewController.swift; sourceTree = "<group>"; };
 		EBD09F972A03BC790065804D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBD09F992A03BC7A0065804D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBD09F9C2A03BC7A0065804D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB6690722A141ECA00FBC5D7 /* ImagesList */ = {
+			isa = PBXGroup;
+			children = (
+				EB6690702A141E9000FBC5D7 /* ImagesListCell.swift */,
+				EBD09F942A03BC790065804D /* ImagesListViewController.swift */,
+			);
+			path = ImagesList;
+			sourceTree = "<group>";
+		};
 		EBD09F842A03BC790065804D = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +112,11 @@
 			children = (
 				EBD09F902A03BC790065804D /* AppDelegate.swift */,
 				EBD09F922A03BC790065804D /* SceneDelegate.swift */,
-				EBD09F942A03BC790065804D /* ViewController.swift */,
 				EBD09F962A03BC790065804D /* Main.storyboard */,
 				EBD09F992A03BC7A0065804D /* Assets.xcassets */,
 				EBD09F9B2A03BC7A0065804D /* LaunchScreen.storyboard */,
 				EBD09F9E2A03BC7A0065804D /* Info.plist */,
+				EB6690722A141ECA00FBC5D7 /* ImagesList */,
 			);
 			path = ImageFeed;
 			sourceTree = "<group>";
@@ -258,7 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBD09F952A03BC790065804D /* ViewController.swift in Sources */,
+				EBD09F952A03BC790065804D /* ImagesListViewController.swift in Sources */,
+				EB6690712A141E9000FBC5D7 /* ImagesListCell.swift in Sources */,
 				EBD09F912A03BC790065804D /* AppDelegate.swift in Sources */,
 				EBD09F932A03BC790065804D /* SceneDelegate.swift in Sources */,
 			);
@@ -366,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
