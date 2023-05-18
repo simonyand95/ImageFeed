@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="204" id="2rv-0M-9QN" customClass="ImageListCell" customModule="ImageFeed" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="204" id="2rv-0M-9QN" customClass="ImagesListCell" customModule="ImageFeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="204"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2rv-0M-9QN" id="emc-V9-PRg">
@@ -43,28 +43,35 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13h-UN-uvj" userLabel="Like Button">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEb-TH-f5w" userLabel="Like Button">
                                                     <rect key="frame" x="329" y="11" width="44" height="44"/>
-                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="Button" image="No Active">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="44" id="7GD-qO-bS6"/>
+                                                        <constraint firstAttribute="height" constant="44" id="ZEn-0j-5u0"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="No Active" title=" "/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="13h-UN-uvj" firstAttribute="leading" secondItem="emc-V9-PRg" secondAttribute="leadingMargin" id="0pf-cV-EL6"/>
                                                 <constraint firstItem="GQi-I3-iVz" firstAttribute="leading" secondItem="emc-V9-PRg" secondAttribute="leadingMargin" id="CpF-nV-dcv"/>
-                                                <constraint firstItem="GQi-I3-iVz" firstAttribute="trailing" secondItem="13h-UN-uvj" secondAttribute="trailing" id="JyJ-Pw-hzy"/>
+                                                <constraint firstItem="FEb-TH-f5w" firstAttribute="trailing" secondItem="GQi-I3-iVz" secondAttribute="trailing" id="FFc-1P-vZO"/>
                                                 <constraint firstItem="GQi-I3-iVz" firstAttribute="bottom" secondItem="BGB-Le-dOp" secondAttribute="bottom" constant="8" id="MBL-CS-TbJ"/>
                                                 <constraint firstItem="BGB-Le-dOp" firstAttribute="leading" secondItem="GQi-I3-iVz" secondAttribute="leading" constant="8" id="N3w-Vz-jyN"/>
                                                 <constraint firstItem="GQi-I3-iVz" firstAttribute="top" secondItem="emc-V9-PRg" secondAttribute="topMargin" id="XdN-DS-Dfl"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="GQi-I3-iVz" secondAttribute="bottom" id="dL1-Kd-gL7"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="GQi-I3-iVz" secondAttribute="trailing" id="eFP-Nt-gIa"/>
+                                                <constraint firstItem="FEb-TH-f5w" firstAttribute="top" secondItem="GQi-I3-iVz" secondAttribute="top" id="p9E-VA-NCq"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BGB-Le-dOp" secondAttribute="trailing" id="unQ-8j-xNO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1031767651" green="0.10832791780000001" blue="0.1335714757" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="cellImage" destination="GQi-I3-iVz" id="IZH-2u-1qx"/>
+                                            <outlet property="dateLabel" destination="BGB-Le-dOp" id="aMD-xc-5eg"/>
+                                            <outlet property="likeButton" destination="FEb-TH-f5w" id="mQk-uH-xbJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
