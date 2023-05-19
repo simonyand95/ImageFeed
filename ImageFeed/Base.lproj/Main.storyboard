@@ -28,7 +28,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="GQi-I3-iVz" userLabel="Cell Image">
-                                                    <rect key="frame" x="20" y="11" width="353" height="182"/>
+                                                    <rect key="frame" x="16" y="4" width="361" height="196"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -38,32 +38,28 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27.08.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGB-Le-dOp" userLabel="Date Label">
-                                                    <rect key="frame" x="28" y="169.33333333333334" width="68" height="15.666666666666657"/>
+                                                    <rect key="frame" x="24" y="176.33333333333334" width="68" height="15.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEb-TH-f5w" userLabel="Like Button">
-                                                    <rect key="frame" x="329" y="11" width="44" height="44"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="44" id="7GD-qO-bS6"/>
-                                                        <constraint firstAttribute="height" constant="44" id="ZEn-0j-5u0"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="318.33333333333331" y="4" width="58.666666666666686" height="42"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="No Active" title=" "/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="like_button_on" title=" "/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="GQi-I3-iVz" firstAttribute="leading" secondItem="emc-V9-PRg" secondAttribute="leadingMargin" id="CpF-nV-dcv"/>
-                                                <constraint firstItem="FEb-TH-f5w" firstAttribute="trailing" secondItem="GQi-I3-iVz" secondAttribute="trailing" id="FFc-1P-vZO"/>
+                                                <constraint firstItem="GQi-I3-iVz" firstAttribute="leading" secondItem="emc-V9-PRg" secondAttribute="leading" constant="16" id="CpF-nV-dcv"/>
                                                 <constraint firstItem="GQi-I3-iVz" firstAttribute="bottom" secondItem="BGB-Le-dOp" secondAttribute="bottom" constant="8" id="MBL-CS-TbJ"/>
                                                 <constraint firstItem="BGB-Le-dOp" firstAttribute="leading" secondItem="GQi-I3-iVz" secondAttribute="leading" constant="8" id="N3w-Vz-jyN"/>
-                                                <constraint firstItem="GQi-I3-iVz" firstAttribute="top" secondItem="emc-V9-PRg" secondAttribute="topMargin" id="XdN-DS-Dfl"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="GQi-I3-iVz" secondAttribute="bottom" id="dL1-Kd-gL7"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GQi-I3-iVz" secondAttribute="trailing" id="eFP-Nt-gIa"/>
+                                                <constraint firstItem="GQi-I3-iVz" firstAttribute="top" secondItem="emc-V9-PRg" secondAttribute="top" constant="4" id="XdN-DS-Dfl"/>
+                                                <constraint firstAttribute="bottom" secondItem="GQi-I3-iVz" secondAttribute="bottom" constant="4" id="dL1-Kd-gL7"/>
+                                                <constraint firstAttribute="trailing" secondItem="GQi-I3-iVz" secondAttribute="trailing" constant="16" id="eFP-Nt-gIa"/>
+                                                <constraint firstItem="GQi-I3-iVz" firstAttribute="trailing" secondItem="FEb-TH-f5w" secondAttribute="trailing" id="hnU-tJ-638"/>
                                                 <constraint firstItem="FEb-TH-f5w" firstAttribute="top" secondItem="GQi-I3-iVz" secondAttribute="top" id="p9E-VA-NCq"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BGB-Le-dOp" secondAttribute="trailing" id="unQ-8j-xNO"/>
+                                                <constraint firstItem="GQi-I3-iVz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BGB-Le-dOp" secondAttribute="trailing" constant="8" id="unQ-8j-xNO"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1031767651" green="0.10832791780000001" blue="0.1335714757" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -84,7 +80,7 @@
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bOd-w4-A9x" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="AD2-j8-nCf"/>
-                            <constraint firstItem="bOd-w4-A9x" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eGA-Ox-oun"/>
+                            <constraint firstAttribute="top" secondItem="bOd-w4-A9x" secondAttribute="top" id="eGA-Ox-oun"/>
                             <constraint firstItem="bOd-w4-A9x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="swc-Wh-xJl"/>
                             <constraint firstAttribute="trailing" secondItem="bOd-w4-A9x" secondAttribute="trailing" id="zfF-QH-jIK"/>
                         </constraints>
@@ -100,6 +96,6 @@
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
-        <image name="No Active" width="30" height="28"/>
+        <image name="like_button_on" width="30" height="28"/>
     </resources>
 </document>
