@@ -10,19 +10,16 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    private var label1: UILabel?
-    private var label2: UILabel?
-    private var label3: UILabel?
     private var imageProfileView: UIImageView?
     
     @objc private func didTapExitButton() {
-        for view1 in view.subviews {
-            if view1 is UILabel {
-                view1.removeFromSuperview()
+        for member in view.subviews {
+            if member is UILabel {
+                member.removeFromSuperview()
             }
-            if view1 is UIImageView {
+            if member is UIImageView {
                 
-                view1.removeFromSuperview()
+                member.removeFromSuperview()
                 let profileImage = UIImage(systemName: "person.crop.circle.fill")
                 let imageProfileView = UIImageView(image: profileImage)
                 imageProfileView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,8 +38,8 @@ class ProfileViewController: UIViewController {
                 
                 
             }
-            if view1 is UIButton {
-                view1.removeFromSuperview()
+            if member is UIButton {
+                member.removeFromSuperview()
             }
         }
     }
@@ -51,27 +48,27 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let label1 = UILabel()
-        label1.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label1)
-        label1.text = "Екатерина Новикова"
-        label1.textColor = .white
-        label1.font = UIFont.boldSystemFont(ofSize: 23)
+        let labelName = UILabel()
+        labelName.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(labelName)
+        labelName.text = "Екатерина Новикова"
+        labelName.textColor = .white
+        labelName.font = UIFont.boldSystemFont(ofSize: 23)
         
         
-        let label2 = UILabel()
-        label2.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label2)
-        label2.text = "@ekaterine_nov"
-        label2.textColor = .gray
-        label2.font = UIFont.systemFont(ofSize: 13)
+        let labelNick = UILabel()
+        labelNick.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(labelNick)
+        labelNick.text = "@ekaterine_nov"
+        labelNick.textColor = .gray
+        labelNick.font = UIFont.systemFont(ofSize: 13)
         
-        let label3 = UILabel()
-        label3.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label3)
-        label3.text = "Hello, world!"
-        label3.textColor = .white
-        label3.font = UIFont.systemFont(ofSize: 13)
+        let labelComment = UILabel()
+        labelComment.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(labelComment)
+        labelComment.text = "Hello, world!"
+        labelComment.textColor = .white
+        labelComment.font = UIFont.systemFont(ofSize: 13)
         
         
         let profileImage = UIImage(named: "Photo")
@@ -87,20 +84,20 @@ class ProfileViewController: UIViewController {
             action: #selector(self.didTapExitButton)
         )
         
-        //let imageExitView = UIImageView(image: exitImage)
+        
         exitButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(exitButton)
         exitButton.tintColor = .red
         
         NSLayoutConstraint.activate([
-            label1.topAnchor.constraint(equalTo: imageProfileView.bottomAnchor, constant: 10),
-            label1.leadingAnchor.constraint(equalTo: imageProfileView.leadingAnchor, constant: 0),
+            labelName.topAnchor.constraint(equalTo: imageProfileView.bottomAnchor, constant: 10),
+            labelName.leadingAnchor.constraint(equalTo: imageProfileView.leadingAnchor, constant: 0),
             
-            label2.topAnchor.constraint(equalTo: label1.bottomAnchor, constant: 10),
-            label2.leadingAnchor.constraint(equalTo: label1.leadingAnchor, constant: 0),
+            labelNick.topAnchor.constraint(equalTo: labelName.bottomAnchor, constant: 10),
+            labelNick.leadingAnchor.constraint(equalTo: labelName.leadingAnchor, constant: 0),
             
-            label3.topAnchor.constraint(equalTo: label2.bottomAnchor, constant: 10),
-            label3.leadingAnchor.constraint(equalTo: label2.leadingAnchor, constant: 0),
+            labelComment.topAnchor.constraint(equalTo: labelNick.bottomAnchor, constant: 10),
+            labelComment.leadingAnchor.constraint(equalTo: labelNick.leadingAnchor, constant: 0),
             
             imageProfileView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             imageProfileView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),

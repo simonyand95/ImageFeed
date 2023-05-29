@@ -24,16 +24,15 @@ class ImagesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == ShowSingleImageSegueIdentifier {
-                    if let viewController = segue.destination as? SingleImageViewController {
-                        if let indexPath = sender as? IndexPath {
-                            let image = UIImage(named: photosName[indexPath.row])
-                            viewController.image = image
-                        }
-                    }
-                } else {
-                    super.prepare(for: segue, sender: sender)
+            if let viewController = segue.destination as? SingleImageViewController,
+                 let indexPath = sender as? IndexPath {
+                    let image = UIImage(named: photosName[indexPath.row])
+                    viewController.image = image
                 }
-            
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
+        
     }
     
     private lazy var dateFormatter: DateFormatter = {
@@ -52,7 +51,7 @@ class ImagesListViewController: UIViewController {
 
 extension ImagesListViewController {
     func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
-        guard let image = UIImage(named: photosName[indexPath.row]) else { // 2
+        guard let image = UIImage(named: photosName[indexPath.row]) else {
             return
         }
         
@@ -72,14 +71,14 @@ extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIdentifier, for: indexPath) // 1
+        let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIdentifier, for: indexPath)
         
-        guard let imageListCell = cell as? ImagesListCell else { // 2
+        guard let imageListCell = cell as? ImagesListCell else {
             return UITableViewCell()
         }
         
-        configCell(for: imageListCell, with: indexPath) // 3
-        return imageListCell // 4
+        configCell(for: imageListCell, with: indexPath)
+        return imageListCell 
         
     }
     
@@ -112,6 +111,6 @@ extension ImagesListViewController: UITableViewDelegate {
         
     }
     
-
+    
     
 }
